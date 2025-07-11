@@ -1,235 +1,63 @@
-/* styles.css */
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Swathi S P - Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">Swathi S P</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-:root {
-  --primary-color: magenta;
-  --secondary-color: maroon;
-  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <img src="https://via.placeholder.com/300x225.png?text=Portrait" alt="Portrait of Swathi S P" class="hero-img" />
+      <div>
+        <h1>Swathi S P</h1>
+        <p>
+          Hello! I’m a passionate engineer specializing in digital electronics and VLSI design. I enjoy crafting efficient hardware solutions and learning cutting-edge technology.
+        </p>
+      </div>
+    </div>
+  </section>
 
-* {
-  box-sizing: border-box;
-}
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I am a dedicated professional with expertise in digital electronics and VLSI. I enjoy solving complex problems and continuously improving my skills.
+    </p>
+  </section>
 
-body {
-  margin: 0;
-  font-family: var(--font-family);
-  line-height: 1.6;
-  scroll-behavior: smooth;
-  background-color: #fff;
-  color: #333;
-}
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">Digital Electronics</div>
+      <div class="skill-card">VLSI</div>
+    </div>
+  </section>
 
-/* Navbar */
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>
+      Feel free to reach out via email:
+      <a href="mailto:swathikongot@gmail.com">swathikongot@gmail.com</a>
+    </p>
+  </section>
 
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: var(--primary-color);
-  color: white;
-  z-index: 999;
-}
-
-.nav-container {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  padding: 0.75rem 1rem;
-  justify-content: space-between;
-}
-
-.nav-logo {
-  font-weight: bold;
-  font-size: 1.25rem;
-  color: white;
-  text-decoration: none;
-}
-
-.nav-menu {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-menu li {
-  margin-left: 1.5rem;
-}
-
-.nav-link {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--secondary-color);
-  outline: none;
-}
-
-/* Hamburger button */
-
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-  display: block;
-  background: white;
-  height: 3px;
-  width: 25px;
-  border-radius: 2px;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.hamburger::before,
-.hamburger::after {
-  content: '';
-  position: absolute;
-}
-
-.hamburger::before {
-  top: -8px;
-}
-
-.hamburger::after {
-  bottom: -8px;
-}
-
-/* Hero Section */
-
-.hero {
-  padding: 6rem 1rem 3rem;
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.hero-img {
-  width: 300px;
-  height: 225px;
-  object-fit: cover;
-  border-radius: 8px;
-  flex-shrink: 0;
-  background: #eee;
-}
-
-.hero-content > div {
-  flex: 1;
-}
-
-.hero h1 {
-  margin-top: 0;
-  color: var(--primary-color);
-}
-
-.about,
-.skills,
-.contact {
-  max-width: 960px;
-  margin: 3rem auto;
-  padding: 0 1rem;
-}
-
-.about h2,
-.skills h2,
-.contact h2 {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
-/* Skills */
-
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.skill-card {
-  background: var(--secondary-color);
-  color: white;
-  padding: 1rem 1.5rem;
-  border-radius: 6px;
-  flex: 1 1 150px;
-  text-align: center;
-  font-weight: 600;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: default;
-}
-
-.skill-card:hover,
-.skill-card:focus {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  outline: none;
-}
-
-/* Contact */
-
-.contact a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.contact a:hover,
-.contact a:focus {
-  text-decoration: underline;
-  outline: none;
-}
-
-/* Responsive / Mobile-first */
-
-@media (max-width: 767px) {
-  .hero {
-    flex-direction: column;
-    padding-top: 5rem;
-  }
-
-  .hero-img {
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-
-  .nav-toggle {
-    display: block;
-  }
-
-  .nav-menu {
-    flex-direction: column;
-    position: fixed;
-    top: 55px;
-    right: 0;
-    background: var(--primary-color);
-    width: 200px;
-    height: calc(100vh - 55px);
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    padding-top: 1rem;
-  }
-
-  .nav-menu.active {
-    transform: translateX(0);
-  }
-
-  .nav-menu li {
-    margin: 1rem 0;
-    text-align: center;
-  }
-}
+  <script src="script.js"></script>
+</body>
+</html>
